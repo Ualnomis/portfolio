@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Lau Man Chun" />
+    <meta name="keywords" content="Lau Man Chun, HTML, CSS, JavaScript, PHP, Python, Java, C#, React.js, Node.js, Web Development, Software Development, SQL" />
+    <title>Lau Man Chun | Portfolio</title>
+
+    <!-- css -->
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <!-- Hover.css -->
+    <link href="./css/hover-min.css" rel="stylesheet" />
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- custom -->
+    <link href="./css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- <button type="button" id="mobile-nav-toggler" onclick="showNavbar()">test</button> -->
+    <button type="button" id="mobile-nav-toggler" onclick="showNavbar()"><i class="fa-solid fa-bars"></i></button>
+
+    <!-- left nav bar -->
+    <header id="header" class="d-flex flex-column justify-content-center">
+        <nav id="navbar" class="navbar nav-menu" id="navbarToggler">
+            <ul>
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active"><i
+                            class="fa-solid fa-house fa-fw"></i><span>.is()</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link"><i class="fa-solid fa-user fa-fw"></i> <span>.about()</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#cv" class="nav-link"><i class="fa-solid fa-file fa-fw"></i><span>.resume()</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#project" class="nav-link"><i class="fa-solid fa-diagram-project fa-fw"></i>
+                        <span>.projects()</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link"><i
+                            class="fa-regular fa-envelope fa-fw"></i><span>.contact()</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" data-bs-smooth-scroll="true">
+            <!-- home section -->
+            <section id="home" class="d-flex flex-column justify-content-center">
+                <!-- intro -->
+                <div class="container" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1><span>Simon</span><span class="func">.is()</span></h1>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-12">
+                            Hello I'm
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>
+                                <span class="func">
+                                    <div id="intro"></div>
+                                </span>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <!-- social link -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="social-links">
+                                <a href="https://github.com/Ualnomis" class="hvr-icon-grow">
+                                    <i class="fa-brands fa-github hvr-icon"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/Ualnomis/" class="hvr-icon-grow">
+                                    <i class="fa-brands fa-linkedin hvr-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about section -->
+            <section id="about" class="section-with-bg">
+                <div class="container" data-aos="fade-up">
+                    <div class="row section-title">
+                        <div class="col col-lg-auto">
+                            <h1>
+                                <div id="about-title">
+
+                                </div>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg-12">
+                            <p>
+                                Hello, my name is Lau Man Chun, and I am a student. I have always been passionate about
+                                technology and how it can be used to solve real-world problems, and I am thrilled to be
+                                part of this dynamic and exciting field.
+                            </p>
+                            <p>
+                                I have four years of experience studying computer science, and during that time, I honed
+                                my skills in various programming languages such as Python, PHP, Java, JavaScript, and
+                                SQL. I have worked on numerous projects and have gained extensive knowledge.
+                            </p>
+                            <p>
+                                In addition to my technical skills, I am a highly collaborative team player and have
+                                experience working with cross-functional teams during my internships. I am also a quick
+                                learner, always eager to take on new challenges and learn new technologies.
+                            </p>
+                            <p>
+                                I am excited about the opportunity to bring my skills and experience to new projects,
+                                and I look forward to working with new teams and contributing to the success of any
+                                project I work on.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col col-lg-12">
+                            <h3>Extensive list of skills</h3>
+                        </div>
+                    </div>
+                    <div class="row mb-2 mt-3">
+                        <div class="col col-lg-12">
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-brands fa-python skill-icon"></i>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-name">
+                                                        Python
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-level-3">
+                                                        Experienced
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-brands fa-html5 skill-icon"></i>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-name">
+                                                        HTML & CSS
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-level-3">
+                                                        Experienced
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-brands fa-js skill-icon"></i>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-name">
+                                                        JavaScript
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-level-3">
+                                                        Experienced
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-brands fa-react skill-icon"></i>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-name">
+                                                        React.js
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-level-3">
+                                                        Experienced
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-brands fa-node-js skill-icon"></i>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-name">
+                                                        Node.js
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-level-2">
+                                                        Intermediate
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-brands fa-php skill-icon"></i>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-name">
+                                                        PHP
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-level-2">
+                                                        Intermediate
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-brands fa-java skill-icon"></i>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-name-2">
+                                                        Java
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-level-2">
+                                                        Intermediate
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="container d-flex justify-content-center align-items-center">
+                                            <div class="row d-flex justify-content-center align-items-center">
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <i class="fa-solid fa-database skill-icon"></i>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-name">
+                                                        SQL
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 d-flex justify-content-center align-items-center">
+                                                    <div class="skill-level-2">
+                                                        Intermediate
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- cv section -->
+            <section id="cv">
+                <div class="container" data-aos="fade-up">
+                    <div class="row section-title">
+                        <div class="col col-lg-auto">
+                            <h1>
+                                <div id="cv-title">
+
+                                </div>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col col-lg-6">
+                            <h3>Education</h3>
+                            <div class="cv-item">
+                                <h4>Bachelor of Science (Hons) Scheme in Computing</h4>
+                                <h5>2021-2023<h5>
+                                        <p>The Hong Kong Polytechnic University</p>
+                            </div>
+                            <div class="cv-item">
+                                <h4>Higher Diploma in Software Engineering</h4>
+                                <h5>2019-2021</h5>
+                                <p>Hong Kong Institute of Vocational Education (Sha Tin)</p>
+                            </div>
+                        </div>
+                        <div class="col col-lg-6">
+                            <h3>Experience</h3>
+                            <div class="cv-item">
+                                <h4>
+                                    Programmer
+                                </h4>
+                                <h5>2022/05-2022/08</h5>
+                                <p>Vast Bright Corporation Limited</p>
+                            </div>
+                            <div class="cv-item">
+                                <h4>
+                                    Software Engineer Intern
+                                </h4>
+                                <h5>2020-2021</h5>
+                                <p>KML Engineering Limited</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col col-lg-12">
+                            <h3>Award</h3>
+                            <div class="cv-item">
+                                <h4>Yeung Kin Man Youth Industrial Incubation Scheme</h4>
+                                <h5>Merit Award</h5>
+                                <h5>2021</h5>
+                            </div>
+                            <div class="cv-item">
+                                <h4>The 7th Hong Kong University Student Innovation and Entrepreneurship Competition</h4>
+                                <h5>Merit Award</h5>
+                                <h5>2021</h5>
+                            </div>
+                            <div class="cv-item">
+                                <h4>HKSAR Government Scholarship Fund</h4>
+                                <h5>Scholarship on Outstanding Performance</h5>
+                                <h5>2020/21</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- project section -->
+            <section id="project" class="section-with-bg" data-aos="fade-up">
+                <div class="container">
+                    <div class="row section-title">
+                        <div class="col col-lg-auto">
+                            <h1>
+                                <div id="projects-title">
+
+                                </div>
+                            </h1>
+                        </div>
+                    </div>
+                    <!-- project list -->
+                    <section id="project-category-item-details">
+                        <div class="row masonry-container" data-masonry='{"percentPosition": true}'>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-xl-0 mt-0">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/polyu_game_project.gif" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">The Slaughterer Spaceman</h5>
+                                        <p class="card-text">The RPG game that created using Unity.</p>
+                                        <a href="https://youtu.be/A6s3nRVm89k"
+                                            class="btn btn-green mt-auto hvr-shrink">Gameplay Demo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-xl-0 mt-4">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/mul_game.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Multiplication Game</h5>
+                                        <p class="card-text">The multiplication game that created by HTML, CSS, and
+                                            JavaScript.</p>
+                                        <button type="button" class="btn hvr-shrink btn-green" data-bs-toggle="modal"
+                                            data-bs-target="#mul-game-modal">Play Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-4">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/web_proj.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Real Estate Website</h5>
+                                        <p class="card-text">A website for users to buy a property or look for a place
+                                            to rent.</p>
+                                        <a href="https://github.com/Ualnomis/ITP4506-Project" class="btn btn-green mt-auto hvr-shrink">Github
+                                            Repo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-4">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/cube_shop.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Cube Shop Management System</h5>
+                                        <p class="card-text">A Cube Shop Management System for tenants to rent and
+                                            manage their cube shop.</p>
+                                        <a href="https://github.com/CSW0126/comp-3335-project-db" class="btn btn-green mt-auto hvr-shrink">Github
+                                            Repo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-4 hide-item">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/food_app.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Diet application​</h5>
+                                        <p class="card-text">An application for users to record daily calories absorbed.
+                                        </p>
+                                        <a href="https://github.com/CSW0126/Mobile-Diet-App-comp-4342-project" class="btn btn-green mt-auto hvr-shrink">Github
+                                            Repo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-4 hide-item">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/fyp.webp" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Face Attendance System</h5>
+                                        <p class="card-text">A system that can detect students' faces and take
+                                            attendance automatically.</p>
+                                        <a href="https://github.com/Ualnomis/FYP" class="btn btn-green mt-auto hvr-shrink">Github
+                                            Repo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-4 hide-item">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/monopoly_game.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Monopoly Game</h5>
+                                        <p class="card-text">The Monopoly game that created using Python.</p>
+                                        <a href="https://github.com/CSW0126/SE_Monopoly" class="btn btn-green mt-auto hvr-shrink">Github
+                                            Repo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-4 hide-item">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/cloud_proj.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Data Monitoring System</h5>
+                                        <p class="card-text">The data monitoring system for viewing the driving behavior
+                                            of people in a selected amount of date and time or viewing a specific
+                                            person's driving behavior.</p>
+                                        <a href="https://github.com/CSW0126/COMP4442_Group_Project-Drive-behavior-and-monitoring-application" class="btn btn-green mt-auto hvr-shrink">Github
+                                            Repo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-4 hide-item">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/nft_marketplace.png" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">NFT Marketplace</h5>
+                                        <p class="card-text">The NFT Marketplace for users to buy and sell NTF.</p>
+                                        <a href="https://github.com/CSW0126/COMP3334_GroupProject-NFT-Marketplace" class="btn btn-green mt-auto hvr-shrink">Github
+                                            Repo</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xl-6 d-flex justify-content-center mt-4 hide-item">
+                                <div class="card h-100 hvr-grow-shadow">
+                                    <img src="./img/giftify.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Giftity</h5>
+                                        <p class="card-text">A eCommerce project developed using HTML CSS and PHP.</p>
+                                        <a href="https://github.com/Ualnomis/COMP3421-WebProject" class="btn btn-green mt-auto hvr-shrink">Github
+                                            Repo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- view more button -->
+                    <div class="row ">
+                        <div class="col col-lg-12">
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-green hvr-shrink mt-4 mb-4"
+                                    id="view-all-item-btn">View
+                                    All</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- #contact section -->
+            <section id="contact" data-aos="fade-up">
+                <div class="container">
+                    <div class="row section-title">
+                        <div class="col col-lg-auto">
+                            <h1>
+                                <div id="contact-title">
+
+                                </div>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-xl-4">
+                            <div class="contact-detail p-4">
+                                <div class="row">
+                                    <div
+                                        class="col-3 col-xl-2 d-flex justify-content-center align-items-center contact-item-icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="col-9 col-xl-10">
+                                        <h5>Email:</h5>
+                                        <p>
+                                            <a href="mailto:ualnamnuhc@gmail.com">ualnamnuhc@gmail.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-detail mt-4 p-4">
+                                <div class="row">
+                                    <div
+                                        class="col-3 col-xl-2 d-flex justify-content-center align-items-center contact-item-icon">
+                                        <i class="fa-solid fa-address-book"></i>
+                                    </div>
+                                    <div class="col-9 col-xl-10">
+                                        <h5>Social Media:</h5>
+                                        <div class="social-links">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <a href="https://github.com/Ualnomis" class="hvr-icon-grow">
+                                                            <i class="fa-brands fa-github hvr-icon"></i>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="https://www.linkedin.com/in/Ualnomis/" class="hvr-icon-grow">
+                                                            <i class="fa-brands fa-linkedin hvr-icon"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- message form to send message to my email -->
+                        <div class="col-12 col-xl-8 mt-xl-0 mt-4 mb-4">
+                            <form id="message-form">
+                                <div class="container p-4">
+                                    <div class="row">
+                                        <div class="col col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="contact-first-name">First Name</label>
+                                                <input type="text" class="form-control" id="contact-first-name"
+                                                    placeholder="First Name" />
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="contact-last-name">Last Name</label>
+                                                <input type="text" class="form-control" id="contact-last-name"
+                                                    placeholder="Last Name" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="contact-email">Email</label>
+                                        <input type="email" class="form-control" id="contact-email"
+                                            placeholder="Email" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="contact-subject">Subject</label>
+                                        <input type="text" class="form-control" id="contact-subject"
+                                            placeholder="Subject" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="contact-message">Message</label>
+                                        <textarea class="form-control" id="contact-message" placeholder="Message"
+                                            rows="5"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-green hvr-shrink">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="section-with-bg">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="col col-lg-12 d-flex justify-content-center align-items-center p-5">
+                    Copyright © Lau Man Chun
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mul-game-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen bg-dark">
+            <div class="modal-content bg-dark">
+                <div class="modal-header bg-dark">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Multiplication Game</h1>
+                    <button type="button" class="modal-close-btn hvr-shrink" data-bs-dismiss="modal"
+                        aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal-body bg-dark">
+                    <div class="container-fiuld h-100">
+                        <iframe class="w-100 h-100" src="https://thirsty-wright-7f6fc1.netlify.app"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- loading spinner -->
+    <div id="loading-spinner">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- script -->
+    <!-- masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Typewriter JS -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/97764fcf74.js" crossorigin="anonymous"></script>
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <!-- custom -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
