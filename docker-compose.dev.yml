@@ -1,0 +1,11 @@
+services:
+  dev:
+    image: portfolio-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 5173:5173
+    container_name: portfolio-dev
