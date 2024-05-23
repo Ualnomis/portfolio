@@ -5,4 +5,5 @@ COPY . .
 FROM base as development
 RUN npm install
 EXPOSE 5173
-CMD ["npm", "run", "dev", "--", "--host"]
+RUN chmod +x ./dev.sh
+CMD ["/bin/bash", "-c", "./dev.sh"]
