@@ -49,6 +49,7 @@ const NavigationMenuRoot = styled(NavigationMenu.Root)`
   height: var(--header-height);
   display: flex;
   align-items: center;
+  background: var(--color-background);
 `;
 
 export default Header;

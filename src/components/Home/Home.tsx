@@ -2,7 +2,6 @@ import React from 'react';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import styled from 'styled-components';
 import HTMLStyleTag from '../HTMLStyleTag';
-import { HEADER_HEIGHT } from '../../constants';
 
 function Home() {
   return (
@@ -10,15 +9,15 @@ function Home() {
       <NameHeading>
         <HTMLStyleTag>Simon.IS</HTMLStyleTag>
       </NameHeading>
-      <Intro>Hey there, I'm Simon Lau</Intro>
-      <Intro>A Web Developer</Intro>
+      <Intro>Hey there! I&apos;m Simon Lau.</Intro>
+      {/* Some for a web developer Animation Later */}
+      <Intro>A Web Developer.</Intro>
+      <Intro>Based in Toronto, ON, Canada</Intro>
     </CenteredMaxWidthWrapper>
   );
 }
 
 const CenteredMaxWidthWrapper = styled(MaxWidthWrapper)`
-  ${HEADER_HEIGHT}
-  padding-top: var(--header-height);
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -3,12 +3,16 @@ import styled from 'styled-components';
 import Header from '../Header';
 import { DARK_TOKENS } from '../../constants';
 import Home from '../Home';
+import About from '../About';
+import Skill from '../Skill';
 
 const App = () => {
   return (
     <Wrapper style={DARK_TOKENS}>
       <Header />
       <Home />
+      <About />
+      <Skill />
     </Wrapper>
   );
 };

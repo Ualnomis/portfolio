@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-const HTMLStyleTag = ({ children }) => {
+const HTMLStyleTag = ({ children }: { children: React.ReactChildren }) => {
   return <Wrapper>{children}</Wrapper>;
 };
 
