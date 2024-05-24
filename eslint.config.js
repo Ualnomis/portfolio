@@ -20,4 +20,9 @@ export default [
   ...tseslint.configs.stylistic,
   ...fixupConfigRules(pluginReactConfig),
   eslintPluginPrettierRecommended,
+  {
+    rules: {
+      'arrow-body-style': ['error', 'always'],
+    },
+  },
 ];
