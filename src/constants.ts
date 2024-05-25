@@ -17,6 +17,7 @@ export const DARK_COLORS = {
   '--color-background': 'hsl(210deg, 30%, 8%)',
   '--color-primary': 'hsl(230deg, 100%, 69%)',
   '--color-muted': 'hsl(210deg, 38%, 15%)',
+  '--color-decorative': 'hsl(200deg, 50%, 60%)',
 };
 
 export const DARK_TOKENS = {

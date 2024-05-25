@@ -15,6 +15,7 @@
     "docker-dev-down": "docker compose -f docker-compose.dev.yml down"
   },
   "dependencies": {
+    "@radix-ui/react-aspect-ratio": "^1.0.3",
     "@radix-ui/react-navigation-menu": "1.1.4",
     "@radix-ui/react-popover": "1.0.7",
     "framer-motion": "^11.2.6",

@@ -16,10 +16,10 @@ const Header = () => {
           <HTMLStyleTag>About</HTMLStyleTag>
         </NavigationMenu.List>
         <NavigationMenu.List>
-          <HTMLStyleTag>Project</HTMLStyleTag>
+          <HTMLStyleTag>SKill</HTMLStyleTag>
         </NavigationMenu.List>
         <NavigationMenu.List>
-          <HTMLStyleTag>Resume</HTMLStyleTag>
+          <HTMLStyleTag>Project</HTMLStyleTag>
         </NavigationMenu.List>
         <NavigationMenu.List>
           <HTMLStyleTag>Contract</HTMLStyleTag>
@@ -37,15 +37,17 @@ const Logo = styled.div`
 `;
 
 const RelativeMaxWidthWrapper = styled(MaxWidthWrapper)`
+  ${HEADER_HEIGHT}
+  height: var(--header-height);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 999;
 `;
 
 const NavigationMenuRoot = styled(NavigationMenu.Root)`
-  ${HEADER_HEIGHT}
   height: var(--header-height);
   display: flex;
   align-items: center;

@@ -5,6 +5,7 @@ import { DARK_TOKENS } from '../../constants';
 import Home from '../Home';
 import About from '../About';
 import Skill from '../Skill';
+import Project from '../Project';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Home />
       <About />
       <Skill />
+      <Project />
     </Wrapper>
   );
 };
