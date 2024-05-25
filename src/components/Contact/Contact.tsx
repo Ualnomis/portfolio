@@ -41,7 +41,7 @@ function Contact() {
     <PageSection header="Contact">
       <FormWrapper>
         {isSent && isSuccess && (
-          <SentResultWrapper isSuccess={isSuccess}>
+          <SentResultWrapper $isSuccess={isSuccess}>
             <SentResultIconWrapper>
               <IoCheckmarkCircle />
             </SentResultIconWrapper>
@@ -49,7 +49,7 @@ function Contact() {
           </SentResultWrapper>
         )}
         {isSent && !isSuccess && (
-          <SentResultWrapper isSuccess={isSuccess}>
+          <SentResultWrapper $isSuccess={isSuccess}>
             <SentResultIconWrapper>
               <MdError />
             </SentResultIconWrapper>
