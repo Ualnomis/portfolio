@@ -1,14 +1,10 @@
 import * as React from 'react';
-import HTMLStyleTag from '../HTMLStyleTag';
-import MaxWidthWrapper from '../MaxWidthWrapper';
 import styled from 'styled-components';
+import PageSection from '../PageSection';
 
 const About = () => {
   return (
-    <MaxWidthWrapper>
-      <h2>
-        <HTMLStyleTag>About</HTMLStyleTag>
-      </h2>
+    <PageSection header="About">
       <Paragraph>
         Hello! I&apos;m Simon Lau, a passionate web developer with a deep
         interest in everything from database design to crafting exceptional user
@@ -30,7 +26,7 @@ const About = () => {
         bring a unique perspective to every project I undertake. Let&apos;s
         create something amazing together!
       </Paragraph>
-    </MaxWidthWrapper>
+    </PageSection>
   );
 };
 

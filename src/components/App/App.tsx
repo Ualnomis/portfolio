@@ -6,6 +6,7 @@ import Home from '../Home';
 import About from '../About';
 import Skill from '../Skill';
 import Project from '../Project';
+import Contact from '../Contact';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <About />
       <Skill />
       <Project />
+      <Contact />
     </Wrapper>
   );
 };

@@ -1,7 +1,5 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import MaxWidthWrapper from '../MaxWidthWrapper';
-import HTMLStyleTag from '../HTMLStyleTag';
 import ProjectItem from '../ProjectItem';
 import giftifyImg from '../../assets/images/giftify.jpg';
 import spacemanGameImg from '../../assets/images/polyu_game_project.gif';
@@ -9,6 +7,7 @@ import nftMarketplaceImg from '../../assets/images/nft_marketplace.png';
 import dietApp from '../../assets/images/food_app.png';
 import multiplicationGameImg from '../../assets/images/mul_game.png';
 import monopolyGameImg from '../../assets/images/monopoly_game.png';
+import PageSection from '../PageSection';
 
 const projects = [
   {
@@ -59,16 +58,13 @@ const projects = [
 
 const Project = () => {
   return (
-    <MaxWidthWrapper>
-      <h2>
-        <HTMLStyleTag>Projects</HTMLStyleTag>
-      </h2>
+    <PageSection header="Project">
       <ProjectWrapper>
         {projects.map((project) => {
           return <ProjectItem key={project.name} {...project} />;
         })}
       </ProjectWrapper>
-    </MaxWidthWrapper>
+    </PageSection>
   );
 };
 

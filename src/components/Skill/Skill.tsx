@@ -1,6 +1,4 @@
 import * as React from 'react';
-import HTMLStyleTag from '../HTMLStyleTag';
-import MaxWidthWrapper from '../MaxWidthWrapper';
 import styled from 'styled-components';
 import {
   IoLogoCss3,
@@ -20,6 +18,7 @@ import {
 import { BiLogoPostgresql } from 'react-icons/bi';
 import { SkillItemProps } from '../../types';
 import SkillItem from '../SKillItem';
+import PageSection from '../PageSection';
 
 const skills: SkillItemProps[] = [
   {
@@ -74,16 +73,13 @@ const skills: SkillItemProps[] = [
 
 const Skill = () => {
   return (
-    <MaxWidthWrapper>
-      <h2>
-        <HTMLStyleTag>Skill</HTMLStyleTag>
-      </h2>
+    <PageSection header="Skill">
       <SkillWrapper>
         {skills.map(({ icon, text }: SkillItemProps) => {
           return <SkillItem key={text} icon={icon} text={text} />;
         })}
       </SkillWrapper>
-    </MaxWidthWrapper>
+    </PageSection>
   );
 };
 
