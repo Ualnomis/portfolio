@@ -27,8 +27,12 @@ const CenteredMaxWidthWrapper = styled(MaxWidthWrapper)`
   height: 100vh;
 `;
 
-const NameHeading = styled.h1``;
+const NameHeading = styled.h1`
+  font-size: 5rem;
+`;
 
-const Intro = styled.p``;
+const Intro = styled.p`
+  font-size: 1.5rem;
+`;
 
 export default Home;

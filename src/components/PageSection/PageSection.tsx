@@ -24,7 +24,7 @@ const SectionHeader = styled.h2`
   justify-content: center;
   align-items: center;
   margin: 32px;
-  font-size: 1.75rem;
+  font-size: 2.5rem;
 `;
 
 export default PageSection;
