@@ -2,13 +2,15 @@ import * as React from 'react';
 import PageSection from '../PageSection';
 import * as Form from '@radix-ui/react-form';
 import styled from 'styled-components';
+import { IoCheckmarkCircle } from 'react-icons/io5';
+import { MdError } from 'react-icons/md';
 
 function Contact() {
-  const [result, setResult] = React.useState('');
+  const [isSent, setIsSent] = React.useState<boolean>(true);
+  const [isSuccess, setIsSuccess] = React.useState<boolean>(false);
 
   const onSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    setResult('Sending....');
     const formData = new FormData(event.target);
 
     formData.append('access_key', 'e6f6a38f-bc3e-491b-b593-1ad75153a26f');
@@ -21,48 +23,112 @@ function Contact() {
     const data = await response.json();
 
     if (data.success) {
-      setResult('Form Submitted Successfully');
+      setIsSent(true);
+      setIsSuccess(true);
       event.target.reset();
-      console.log(result);
     } else {
-      console.log('Error', data);
-      setResult(data.message);
+      setIsSent(true);
+      setIsSuccess(false);
     }
+  };
+
+  const handleTryAgain = () => {
+    setIsSent(false);
+    setIsSuccess(false);
   };
 
   return (
     <PageSection header="Contact">
-      <FormRoot onSubmit={onSubmit}>
-        <FormField name="name">
-          <Form.Label>First Name</Form.Label>
-          <FormControl type="text" />
-          <Form.Message className="FormMessage" match="valueMissing">
-            Please enter your name
-          </Form.Message>
-        </FormField>
-        <FormField name="email">
-          <Form.Label>Email </Form.Label>
-          <FormControl type="email" />
-          <Form.Message className="FormMessage" match="valueMissing">
-            Please enter your email
-          </Form.Message>
-        </FormField>
-        <FormField name="message">
-          <Form.Label>Message </Form.Label>
-          <FormControl asChild>
-            <TextArea></TextArea>
-          </FormControl>
-          <Form.Message className="FormMessage" match="valueMissing">
-            Please enter your email
-          </Form.Message>
-        </FormField>
-        <FormSubmit>Submit</FormSubmit>
-      </FormRoot>
+      <FormWrapper>
+        {isSent && isSuccess && (
+          <SentResultWrapper isSuccess={isSuccess}>
+            <SentResultIconWrapper>
+              <IoCheckmarkCircle />
+            </SentResultIconWrapper>
+            <SentResultMessage>Success!</SentResultMessage>
+          </SentResultWrapper>
+        )}
+        {isSent && !isSuccess && (
+          <SentResultWrapper isSuccess={isSuccess}>
+            <SentResultIconWrapper>
+              <MdError />
+            </SentResultIconWrapper>
+            <SentResultMessage>Oops! Something went wrong!</SentResultMessage>
+            <TryAgainButton onClick={handleTryAgain}>Try Again</TryAgainButton>
+          </SentResultWrapper>
+        )}
+        {!isSent && (
+          <Form.Root onSubmit={onSubmit}>
+            <FormField name="name">
+              <LabelMessageWrapper>
+                <Form.Label>First Name</Form.Label>
+                <FormMessage match="valueMissing">
+                  Please enter your name
+                </FormMessage>
+              </LabelMessageWrapper>
+              <FormControl type="text" required />
+            </FormField>
+            <FormField name="email">
+              <LabelMessageWrapper>
+                <Form.Label>Email </Form.Label>
+                <FormMessage match="valueMissing">
+                  Please enter your email
+                </FormMessage>
+                <FormMessage match="typeMismatch">
+                  Please enter validate email
+                </FormMessage>
+              </LabelMessageWrapper>
+              <FormControl type="email" required />
+            </FormField>
+            <FormField name="message">
+              <LabelMessageWrapper>
+                <Form.Label>Message </Form.Label>
+                <FormMessage match="valueMissing">
+                  Please enter your message
+                </FormMessage>
+              </LabelMessageWrapper>
+              <FormControl asChild required>
+                <TextArea></TextArea>
+              </FormControl>
+            </FormField>
+            <FormSubmit>Submit</FormSubmit>
+          </Form.Root>
+        )}
+      </FormWrapper>
     </PageSection>
   );
 }
 
-const FormRoot = styled(Form.Root)`
+const SentResultWrapper = styled.div`
+  color: ${({ isSuccess }: { isSuccess: boolean }) => {
+    return isSuccess ? 'var(--color-success)' : 'var(--color-error)';
+  }};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const SentResultIconWrapper = styled.div`
+  font-size: 5rem;
+  color: inherit;
+`;
+const SentResultMessage = styled.div`
+  font-size: 1.75rem;
+  color: inherit;
+`;
+
+const TryAgainButton = styled.button`
+  margin-top: 32px;
+  font-size: 1.75rem;
+  color: var(--color-muted);
+  background: var(--color-error);
+  border: 0;
+  padding: var(--padding);
+  border-radius: var(--inner-radius);
+`;
+
+const FormWrapper = styled.div`
   background: var(--color-muted);
   --padding: 16px;
   padding: var(--padding);
@@ -84,8 +150,11 @@ const FormControl = styled(Form.Control)`
   appearance: none;
   border: 0;
   background: inherit;
-  color: var(--color-text);
+  color: inherit;
   border-bottom: white solid 3px;
+
+  &:focus {
+  }
 `;
 
 const FormSubmit = styled(Form.Submit)`
@@ -145,6 +214,16 @@ const FormSubmit = styled(Form.Submit)`
     border-radius: 0px 0px 4px 4px;
     pointer-events: none;
   }
+`;
+
+const LabelMessageWrapper = styled.div`
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+`;
+
+const FormMessage = styled(Form.Message)`
+  color: var(--color-error);
 `;
 
 export default Contact;
