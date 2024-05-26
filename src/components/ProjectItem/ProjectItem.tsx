@@ -90,6 +90,7 @@ const ProjectStack = styled.ul`
   display: flex;
   padding: 0;
   gap: var(--padding);
+  flex-wrap: wrap;
 `;
 
 const ProjectStackItem = styled.li`
