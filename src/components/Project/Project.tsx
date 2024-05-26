@@ -8,6 +8,7 @@ import dietApp from '../../assets/images/food_app.png';
 import multiplicationGameImg from '../../assets/images/mul_game.png';
 import monopolyGameImg from '../../assets/images/monopoly_game.png';
 import PageSection from '../PageSection';
+import { QUERIES } from '../../constants';
 
 const projects = [
   {
@@ -72,6 +73,10 @@ const ProjectWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 16px;
+
+  @media ${QUERIES.tabletAndDown} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export default Project;
