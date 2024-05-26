@@ -12,18 +12,20 @@ const NavBar = () => {
         <Logo>
           <HTMLStyleTag>Simon</HTMLStyleTag>
         </Logo>
-        <NavigationMenu.List>
-          <HTMLStyleTag>About</HTMLStyleTag>
-        </NavigationMenu.List>
-        <NavigationMenu.List>
-          <HTMLStyleTag>SKill</HTMLStyleTag>
-        </NavigationMenu.List>
-        <NavigationMenu.List>
-          <HTMLStyleTag>Project</HTMLStyleTag>
-        </NavigationMenu.List>
-        <NavigationMenu.List>
-          <HTMLStyleTag>Contract</HTMLStyleTag>
-        </NavigationMenu.List>
+        <NavigationMenuList>
+          <NavigationMenu.Item>
+            <HTMLStyleTag>About</HTMLStyleTag>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item>
+            <HTMLStyleTag>SKill</HTMLStyleTag>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item>
+            <HTMLStyleTag>Project</HTMLStyleTag>
+          </NavigationMenu.Item>
+          <NavigationMenu.Item>
+            <HTMLStyleTag>Contract</HTMLStyleTag>
+          </NavigationMenu.Item>
+        </NavigationMenuList>
         <NavigationMenu.Indicator />
       </NavigationMenuRoot>
     </RelativeMaxWidthWrapper>
@@ -32,8 +34,17 @@ const NavBar = () => {
 
 const Logo = styled.div`
   margin-right: auto;
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--color-primary);
+`;
+
+const NavigationMenuList = styled(NavigationMenu.List)`
+  display: flex;
+  list-style-type: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  font-size: 1.25rem;
 `;
 
 const RelativeMaxWidthWrapper = styled(MaxWidthWrapper)`
