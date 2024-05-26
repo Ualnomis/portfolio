@@ -6,7 +6,7 @@ import { IoCheckmarkCircle } from 'react-icons/io5';
 import { MdError } from 'react-icons/md';
 
 function Contact() {
-  const [isSent, setIsSent] = React.useState<boolean>(true);
+  const [isSent, setIsSent] = React.useState<boolean>(false);
   const [isSuccess, setIsSuccess] = React.useState<boolean>(false);
 
   const onSubmit = async (event: React.FormEvent) => {
