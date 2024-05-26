@@ -8,6 +8,7 @@ import Skill from '../Skill';
 import Project from '../Project';
 import Contact from '../Contact';
 import Footer from '../Footer';
+import SocialMediaSidebar from '../SocialMediaSidebar';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <Project />
       <Contact />
       <Footer />
+      <SocialMediaSidebar />
     </Wrapper>
   );
 };
