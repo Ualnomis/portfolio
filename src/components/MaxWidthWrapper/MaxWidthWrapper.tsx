@@ -9,9 +9,8 @@ const MaxWidthWrapper = ({
 };
 
 const Wrapper = styled.div`
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 32px;
+  --max-width: 1100px;
+  margin-inline: max(128px, 50% - var(--max-width) / 2);
 `;
 
 export default MaxWidthWrapper;
