@@ -6,6 +6,8 @@ const HTMLStyleTag = ({ children }: { children: React.ReactChildren }) => {
 };
 
 const Wrapper = styled.div`
+  white-space: nowrap;
+
   &:before {
     content: '<';
   }

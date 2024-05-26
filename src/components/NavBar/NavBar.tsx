@@ -2,12 +2,11 @@ import React from 'react';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import styled from 'styled-components';
 import HTMLStyleTag from '../HTMLStyleTag';
-import MaxWidthWrapper from '../MaxWidthWrapper';
 import { HEADER_HEIGHT } from '../../constants';
 
 const NavBar = () => {
   return (
-    <RelativeMaxWidthWrapper>
+    <Wrapper>
       <NavigationMenuRoot>
         <Logo>
           <HTMLStyleTag>Simon</HTMLStyleTag>
@@ -28,12 +27,13 @@ const NavBar = () => {
         </NavigationMenuList>
         <NavigationMenu.Indicator />
       </NavigationMenuRoot>
-    </RelativeMaxWidthWrapper>
+    </Wrapper>
   );
 };
 
 const Logo = styled.div`
   margin-right: auto;
+  padding-right: 32px;
   font-size: 3rem;
   color: var(--color-primary);
 `;
@@ -44,10 +44,9 @@ const NavigationMenuList = styled(NavigationMenu.List)`
   gap: 32px;
   margin: 0;
   padding: 0;
-  font-size: 1.25rem;
 `;
 
-const RelativeMaxWidthWrapper = styled(MaxWidthWrapper)`
+const Wrapper = styled.div`
   ${HEADER_HEIGHT}
   height: var(--header-height);
   position: fixed;
@@ -55,6 +54,7 @@ const RelativeMaxWidthWrapper = styled(MaxWidthWrapper)`
   bottom: 0;
   left: 0;
   right: 0;
+  padding: 0 32px;
   z-index: 999;
 `;
 
