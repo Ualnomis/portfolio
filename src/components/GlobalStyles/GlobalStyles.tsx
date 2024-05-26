@@ -82,6 +82,18 @@ h6 {
   font-style: normal;
   font-display: fallback;
 }
+
+
+:root[data-theme="dark"] {
+  --color-text: hsl(0deg, 0%, 100%);
+  --color-background: hsl(210deg, 30%, 8%);
+  --color-primary: hsl(230deg, 100%, 69%);
+  --color-muted: hsl(210deg, 38%, 15%);
+  --color-decorative: hsl(200deg, 50%, 60%);
+  --color-success: hsl(160deg, 100%, 40%);
+  --color-error: hsl(340deg, 95%, 60%);
+  --color-blurred-background: hsla(210deg, 30%, 8%, 0.85);
+}
 `;
 
 export default GlobalStyles;

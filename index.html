@@ -8,6 +8,12 @@
   </head>
   <body>
     <div id="root"></div>
+    <div id="mobile-nav-portal"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      const root = document.documentElement;
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.dataset.theme = theme;
+    </script>
   </body>
 </html>

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import NavBar from '../NavBar';
-import { DARK_TOKENS } from '../../constants';
 import Home from '../Home';
 import About from '../About';
 import Skill from '../Skill';
@@ -12,7 +11,7 @@ import SocialMediaSidebar from '../SocialMediaSidebar';
 
 const App = () => {
   return (
-    <Wrapper style={DARK_TOKENS}>
+    <Wrapper>
       <NavBar />
       <Home />
       <About />

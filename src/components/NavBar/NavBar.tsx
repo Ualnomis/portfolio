@@ -1,32 +1,30 @@
 import React from 'react';
-import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import styled from 'styled-components';
 import HTMLStyleTag from '../HTMLStyleTag';
-import { HEADER_HEIGHT } from '../../constants';
+import { HEADER_HEIGHT, QUERIES } from '../../constants';
+import MobileNavigationMenu from '../MobileNavigationMenu';
+import DesktopNavigationMenu from '../DesktopNavigationMenu';
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
+import { IoMenu } from 'react-icons/io5';
 
 const NavBar = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false);
+
+  const toggleIsMenuOpen = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <Wrapper>
-      <NavigationMenuRoot>
-        <Logo>
-          <HTMLStyleTag>Simon</HTMLStyleTag>
-        </Logo>
-        <NavigationMenuList>
-          <NavigationMenu.Item>
-            <HTMLStyleTag>About</HTMLStyleTag>
-          </NavigationMenu.Item>
-          <NavigationMenu.Item>
-            <HTMLStyleTag>SKill</HTMLStyleTag>
-          </NavigationMenu.Item>
-          <NavigationMenu.Item>
-            <HTMLStyleTag>Project</HTMLStyleTag>
-          </NavigationMenu.Item>
-          <NavigationMenu.Item>
-            <HTMLStyleTag>Contract</HTMLStyleTag>
-          </NavigationMenu.Item>
-        </NavigationMenuList>
-        <NavigationMenu.Indicator />
-      </NavigationMenuRoot>
+      <Logo>
+        <HTMLStyleTag>Simon</HTMLStyleTag>
+      </Logo>
+      <DesktopNavigationMenu />
+      <MenuButton aria-expanded={isMenuOpen} onClick={toggleIsMenuOpen}>
+        <IoMenu aria-hidden="true" focusable="false" />
+        <VisuallyHidden.Root>Open Nvigation Menu</VisuallyHidden.Root>
+      </MenuButton>
+      {isMenuOpen && <MobileNavigationMenu handleDismiss={toggleIsMenuOpen} />}
     </Wrapper>
   );
 };
@@ -38,12 +36,24 @@ const Logo = styled.div`
   color: var(--color-primary);
 `;
 
-const NavigationMenuList = styled(NavigationMenu.List)`
-  display: flex;
-  list-style-type: none;
-  gap: 32px;
+const MenuButton = styled.button`
+  display: none;
+  background: none;
+  color: var(--color-text);
+  border: 0;
   margin: 0;
   padding: 0;
+  font-size: 3rem;
+  cursor: pointer;
+  opacity: 0.7;
+
+  @media ${QUERIES.tabletAndDown} {
+    display: revert;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -56,10 +66,6 @@ const Wrapper = styled.div`
   right: 0;
   padding: 0 32px;
   z-index: 999;
-`;
-
-const NavigationMenuRoot = styled(NavigationMenu.Root)`
-  height: var(--header-height);
   display: flex;
   align-items: center;
   background: var(--color-background);
