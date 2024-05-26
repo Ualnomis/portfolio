@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
+import { QUERIES } from '../../constants';
 
 function SocialMediaSidebar() {
   return (
@@ -23,6 +24,10 @@ const Wrapper = styled.div`
   left: 32px;
   font-size: 4rem;
   gap: 16px;
+
+  @media ${QUERIES.tabletAndDown} {
+    display: none;
+  }
 `;
 
 const Link = styled.a`

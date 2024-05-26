@@ -28,11 +28,13 @@ const CenteredMaxWidthWrapper = styled(MaxWidthWrapper)`
 `;
 
 const NameHeading = styled.h1`
-  font-size: 5rem;
+  font-size: 2rem;
+  font-size: clamp(2rem, 2rem + 4.363636363636364vw, 5rem);
 `;
 
 const Intro = styled.p`
-  font-size: 1.5rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 1rem + 0.7272727272727273vw, 1.5rem);
 `;
 
 export default Home;
