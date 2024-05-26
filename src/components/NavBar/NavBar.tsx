@@ -5,7 +5,7 @@ import HTMLStyleTag from '../HTMLStyleTag';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import { HEADER_HEIGHT } from '../../constants';
 
-const Header = () => {
+const NavBar = () => {
   return (
     <RelativeMaxWidthWrapper>
       <NavigationMenuRoot>
@@ -54,4 +54,4 @@ const NavigationMenuRoot = styled(NavigationMenu.Root)`
   background: var(--color-background);
 `;
 
-export default Header;
+export default NavBar;
