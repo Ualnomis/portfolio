@@ -59,7 +59,7 @@ const projects = [
 
 const Project = () => {
   return (
-    <PageSection header="Project">
+    <PageSection header="Project" id="project">
       <ProjectWrapper>
         {projects.map((project) => {
           return <ProjectItem key={project.name} {...project} />;

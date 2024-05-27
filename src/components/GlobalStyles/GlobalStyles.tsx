@@ -94,6 +94,12 @@ h6 {
   --color-error: hsl(340deg, 95%, 60%);
   --color-blurred-background: hsla(210deg, 30%, 8%, 0.85);
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 `;
 
 export default GlobalStyles;

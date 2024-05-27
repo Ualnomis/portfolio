@@ -3,22 +3,31 @@ import { QUERIES } from '../../constants';
 import HTMLStyleTag from '../HTMLStyleTag';
 import styled from 'styled-components';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
+import SmoothScrollTo from '../SmoothScrollTo';
 
 function DesktopNavigationMenu() {
   return (
     <NavigationMenuRoot>
       <DesktopNavigationMenuList>
         <NavigationMenu.Item>
-          <HTMLStyleTag>About</HTMLStyleTag>
+          <SmoothScrollTo id="about">
+            <HTMLStyleTag>About</HTMLStyleTag>
+          </SmoothScrollTo>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
-          <HTMLStyleTag>SKill</HTMLStyleTag>
+          <SmoothScrollTo id="skill">
+            <HTMLStyleTag>SKill</HTMLStyleTag>
+          </SmoothScrollTo>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
-          <HTMLStyleTag>Project</HTMLStyleTag>
+          <SmoothScrollTo id="project">
+            <HTMLStyleTag>Project</HTMLStyleTag>
+          </SmoothScrollTo>
         </NavigationMenu.Item>
         <NavigationMenu.Item>
-          <HTMLStyleTag>Contract</HTMLStyleTag>
+          <SmoothScrollTo id="contact">
+            <HTMLStyleTag>Contract</HTMLStyleTag>
+          </SmoothScrollTo>
         </NavigationMenu.Item>
       </DesktopNavigationMenuList>
       <NavigationMenu.Indicator />

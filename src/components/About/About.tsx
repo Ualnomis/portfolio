@@ -4,7 +4,7 @@ import PageSection from '../PageSection';
 
 const About = () => {
   return (
-    <PageSection header="About">
+    <PageSection header="About" id="about">
       <Paragraph>
         Hello! I&apos;m Simon Lau, a passionate web developer with a deep
         interest in everything from database design to crafting exceptional user

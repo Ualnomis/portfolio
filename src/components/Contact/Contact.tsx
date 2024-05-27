@@ -38,7 +38,7 @@ function Contact() {
   };
 
   return (
-    <PageSection header="Contact">
+    <PageSection header="Contact" id="contact">
       <FormWrapper>
         {isSent && isSuccess && (
           <SentResultWrapper $isSuccess={isSuccess}>

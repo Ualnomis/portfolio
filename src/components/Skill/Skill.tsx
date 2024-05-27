@@ -73,7 +73,7 @@ const skills: SkillItemProps[] = [
 
 const Skill = () => {
   return (
-    <PageSection header="Skill">
+    <PageSection header="Skill" id="skill">
       <SkillWrapper>
         {skills.map(({ icon, text }: SkillItemProps) => {
           return <SkillItem key={text} icon={icon} text={text} />;

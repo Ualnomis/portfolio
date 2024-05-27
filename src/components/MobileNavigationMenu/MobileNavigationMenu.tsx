@@ -5,9 +5,9 @@ import styled from 'styled-components';
 import HTMLStyleTag from '../HTMLStyleTag';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import { IoClose } from 'react-icons/io5';
-import { QUERIES } from '../../constants';
 import { RemoveScroll } from 'react-remove-scroll';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
+import SmoothScrollTo from '../SmoothScrollTo';
 
 const MobileNavigationMenu = ({
   handleDismiss,
@@ -25,16 +25,24 @@ const MobileNavigationMenu = ({
           <NavigationMenuRoot>
             <NavigationMenuList>
               <NavigationListItem>
-                <HTMLStyleTag>About</HTMLStyleTag>
+                <SmoothScrollTo id="about" callback={handleDismiss}>
+                  <HTMLStyleTag>About</HTMLStyleTag>
+                </SmoothScrollTo>
               </NavigationListItem>
               <NavigationListItem>
-                <HTMLStyleTag>SKill</HTMLStyleTag>
+                <SmoothScrollTo id="skill" callback={handleDismiss}>
+                  <HTMLStyleTag>SKill</HTMLStyleTag>
+                </SmoothScrollTo>
               </NavigationListItem>
               <NavigationListItem>
-                <HTMLStyleTag>Project</HTMLStyleTag>
+                <SmoothScrollTo id="project" callback={handleDismiss}>
+                  <HTMLStyleTag>Project</HTMLStyleTag>
+                </SmoothScrollTo>
               </NavigationListItem>
               <NavigationListItem>
-                <HTMLStyleTag>Contract</HTMLStyleTag>
+                <SmoothScrollTo id="contact" callback={handleDismiss}>
+                  <HTMLStyleTag>Contract</HTMLStyleTag>
+                </SmoothScrollTo>
               </NavigationListItem>
             </NavigationMenuList>
             <NavigationMenu.Indicator />
@@ -72,19 +80,14 @@ const NavigationMenuRoot = styled(NavigationMenu.Root)`
 `;
 
 const Wrapper = styled.div`
-  display: none;
-
-  @media ${QUERIES.tabletAndDown} {
-    display: revert;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    background: var(--color-blurred-background);
-    backdrop-filter: blur(8px);
-  }
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  background: var(--color-blurred-background);
+  backdrop-filter: blur(8px);
 `;
 
 const CloseIcon = styled(IoClose)``;
