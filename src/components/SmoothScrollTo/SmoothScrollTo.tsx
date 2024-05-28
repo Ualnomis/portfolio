@@ -15,7 +15,9 @@ const SmoothScrollTo = ({
       top: '96px',
       behavior: 'smooth',
     });
-    callback();
+    if (callback) {
+      callback();
+    }
   };
 
   return (

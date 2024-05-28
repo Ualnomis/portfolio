@@ -32,6 +32,12 @@ const Wrapper = styled.div`
 
 const Link = styled.a`
   color: inherit;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 `;
 
 export default SocialMediaSidebar;

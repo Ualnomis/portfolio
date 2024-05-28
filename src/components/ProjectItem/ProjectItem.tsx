@@ -83,6 +83,12 @@ const ProjectLink = styled.a`
   border-radius: var(--inner-radius);
   text-decoration: none;
   color: inherit;
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 `;
 
 const ProjectStack = styled.ul`
