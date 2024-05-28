@@ -2,29 +2,55 @@ import React from 'react';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import styled from 'styled-components';
 import HTMLStyleTag from '../HTMLStyleTag';
+import { HEADER_HEIGHT, QUERIES } from '../../constants';
+import Avatar from '../Avatar';
 
-function Home() {
+const Home = () => {
   return (
-    <CenteredMaxWidthWrapper>
-      <NameHeading>
-        <HTMLStyleTag>Simon.IS</HTMLStyleTag>
-      </NameHeading>
-      <Intro>Hey there! I&apos;m Simon Lau.</Intro>
-      {/* Some for a web developer Animation Later */}
-      <Intro>A Web Developer.</Intro>
-      <Intro>Based in Toronto, ON, Canada</Intro>
-    </CenteredMaxWidthWrapper>
+    <Section>
+      <Wrapper>
+        <Introduction>
+          <NameHeading>
+            <HTMLStyleTag>
+              Simon<span aria-hidden="true">.</span>
+              is
+            </HTMLStyleTag>
+          </NameHeading>
+          <Paragraph>Hey there! I&apos;m Simon Lau.</Paragraph>
+          {/* Some for a web developer Animation Later */}
+          <Paragraph>A Web Developer.</Paragraph>
+          <Paragraph>Based in Toronto, ON, Canada.</Paragraph>
+        </Introduction>
+        <Avatar />
+      </Wrapper>
+    </Section>
   );
-}
+};
 
-const CenteredMaxWidthWrapper = styled(MaxWidthWrapper)`
+const Section = styled.section`
+  display: flex;
+  min-height: 100vh;
+`;
+
+const Introduction = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
+  @media ${QUERIES.tabletAndDown} {
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const Wrapper = styled(MaxWidthWrapper)`
+  ${HEADER_HEIGHT}
+  display: flex;
   align-items: center;
+  margin-top: var(--header-height);
+  margin-bottom: var(--header-height);
+  min-height: 550px;
   flex: 1;
-  max-height: 100vh;
-  height: 100vh;
+  justify-content: center;
 `;
 
 const NameHeading = styled.h1`
@@ -32,7 +58,7 @@ const NameHeading = styled.h1`
   font-size: clamp(2rem, 2rem + 4.363636363636364vw, 5rem);
 `;
 
-const Intro = styled.p`
+const Paragraph = styled.p`
   font-size: 1rem;
   font-size: clamp(1rem, 1rem + 0.7272727272727273vw, 1.5rem);
 `;

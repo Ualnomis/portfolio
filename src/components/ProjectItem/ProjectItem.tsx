@@ -15,7 +15,7 @@ const ProjectItem = ({
   return (
     <Wrapper>
       <AspectRatio.Root ratio={2 / 1}>
-        <Image src={imgSrc}></Image>
+        <Image loading="lazy" src={imgSrc}></Image>
       </AspectRatio.Root>
       <ProjectName>{name}</ProjectName>
       <ProjectStack>
