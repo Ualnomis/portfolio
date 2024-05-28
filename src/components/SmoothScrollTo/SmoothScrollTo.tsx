@@ -26,7 +26,7 @@ const SmoothScrollTo = ({
 };
 
 const Link = styled.a`
-  opacity: 0, 7;
+  opacity: 0.7;
   text-decoration: none;
   color: inherit;
 
