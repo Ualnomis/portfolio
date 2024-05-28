@@ -5,7 +5,7 @@ const SKillItem = ({ icon: Icon, text }: SkillItemProps) => {
   return (
     <SkillItem>
       <SkillItemIcon>
-        <Icon />
+        <Icon aria-hidden={true} />
       </SkillItemIcon>
       <SkillItemText>{text}</SkillItemText>
     </SkillItem>

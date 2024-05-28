@@ -1,19 +1,22 @@
 import styled from 'styled-components';
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
 import { QUERIES } from '../../constants';
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 
-function SocialMediaSidebar() {
+const SocialMediaSidebar = () => {
   return (
     <Wrapper>
       <Link href="https://github.com/ualnomis">
-        <IoLogoGithub />
+        <IoLogoGithub aria-hidden={true} />
+        <VisuallyHidden.Root>Github</VisuallyHidden.Root>
       </Link>
       <Link href="https://www.linkedin.com/in/ualnomis/">
-        <IoLogoLinkedin />
+        <IoLogoLinkedin aria-hidden={true} />
+        <VisuallyHidden.Root>LinkedIn</VisuallyHidden.Root>
       </Link>
     </Wrapper>
   );
-}
+};
 
 const Wrapper = styled.div`
   display: flex;

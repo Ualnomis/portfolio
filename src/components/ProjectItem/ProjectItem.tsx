@@ -14,7 +14,7 @@ const ProjectItem = ({
   return (
     <Wrapper>
       <AspectRatio.Root ratio={2 / 1}>
-        <Image loading="lazy" src={imgSrc}></Image>
+        <Image loading="lazy" src={imgSrc} alt=""></Image>
       </AspectRatio.Root>
       <ProjectName>{name}</ProjectName>
       <ProjectStack>
@@ -82,7 +82,7 @@ const ProjectLink = styled.a`
   border-radius: var(--inner-radius);
   text-decoration: none;
   color: inherit;
-  opacity: 0.7;
+  opacity: 0.9;
 
   &:hover {
     opacity: 1;
@@ -100,7 +100,7 @@ const ProjectStack = styled.ul`
 
 const ProjectStackItem = styled.li`
   padding: 8px;
-  background: var(--color-primary);
+  background: var(--color-info);
   border-radius: var(--inner-radius);
 `;
 
