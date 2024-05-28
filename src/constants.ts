@@ -1,4 +1,5 @@
-export const HEADER_HEIGHT = '--header-height: 96px;';
+export const HEADER_HEIGHT_VALUE = 96;
+export const HEADER_HEIGHT = `--header-height: ${HEADER_HEIGHT_VALUE}px;`;
 
 export const BREAKPOINTS = {
   laptopMax: 1500,

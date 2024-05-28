@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from 'styled-components';
 import ProjectItem from '../ProjectItem';
 import giftifyImg from '../../assets/images/giftify.jpg';

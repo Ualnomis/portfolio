@@ -1,11 +1,12 @@
-import * as React from 'react';
 import styled from 'styled-components';
 import { SkillItemProps } from '../../types';
 
-const SKillItem = ({ icon, text }: SkillItemProps) => {
+const SKillItem = ({ icon: Icon, text }: SkillItemProps) => {
   return (
     <SkillItem>
-      <SkillItemIcon>{icon}</SkillItemIcon>
+      <SkillItemIcon>
+        <Icon />
+      </SkillItemIcon>
       <SkillItemText>{text}</SkillItemText>
     </SkillItem>
   );

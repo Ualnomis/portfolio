@@ -23,6 +23,7 @@ export default [
   {
     rules: {
       'arrow-body-style': ['error', 'always'],
+      'react/react-in-jsx-scope': 'off',
     },
   },
 ];

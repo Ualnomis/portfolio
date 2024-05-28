@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from 'styled-components';
 import {
   IoLogoCss3,
@@ -22,51 +21,51 @@ import PageSection from '../PageSection';
 
 const skills: SkillItemProps[] = [
   {
-    icon: <IoLogoReact />,
+    icon: IoLogoReact,
     text: 'React',
   },
   {
-    icon: <RiNextjsFill />,
+    icon: RiNextjsFill,
     text: 'Next.js',
   },
   {
-    icon: <SiTypescript />,
+    icon: SiTypescript,
     text: 'TypeScript',
   },
   {
-    icon: <IoLogoJavascript />,
+    icon: IoLogoJavascript,
     text: 'JavaScript',
   },
   {
-    icon: <IoLogoHtml5 />,
+    icon: IoLogoHtml5,
     text: 'HTML',
   },
   {
-    icon: <IoLogoNodejs />,
+    icon: IoLogoNodejs,
     text: 'NodeJS',
   },
   {
-    icon: <SiExpress />,
+    icon: SiExpress,
     text: 'ExpressJS',
   },
   {
-    icon: <SiMongodb />,
+    icon: SiMongodb,
     text: 'MongoDB',
   },
   {
-    icon: <BiLogoPostgresql />,
+    icon: BiLogoPostgresql,
     text: 'PostgreSQL',
   },
   {
-    icon: <IoLogoCss3 />,
+    icon: IoLogoCss3,
     text: 'GraphQL',
   },
   {
-    icon: <IoLogoDocker />,
+    icon: IoLogoDocker,
     text: 'Docker',
   },
   {
-    icon: <SiStyledcomponents />,
+    icon: SiStyledcomponents,
     text: 'Styled Component',
   },
 ];

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import FocusLock from 'react-focus-lock';
 import { createPortal } from 'react-dom';
 import styled from 'styled-components';
@@ -12,7 +11,7 @@ import SmoothScrollTo from '../SmoothScrollTo';
 const MobileNavigationMenu = ({
   handleDismiss,
 }: {
-  handleDismiss: React.MouseEventHandler<HTMLButtonElement>;
+  handleDismiss: () => void;
 }) => {
   return createPortal(
     <FocusLock returnFocus={true}>
@@ -50,7 +49,7 @@ const MobileNavigationMenu = ({
         </Wrapper>
       </RemoveScroll>
     </FocusLock>,
-    document.querySelector('#mobile-nav-portal'),
+    document.querySelector('#mobile-nav-portal') as Element,
   );
 };
 

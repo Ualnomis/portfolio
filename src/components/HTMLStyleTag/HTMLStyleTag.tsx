@@ -1,7 +1,6 @@
-import * as React from 'react';
 import styled from 'styled-components';
 
-const HTMLStyleTag = ({ children }: { children: React.ReactChildren }) => {
+const HTMLStyleTag = ({ children }: { children: React.ReactNode }) => {
   return (
     <Wrapper>
       <span aria-hidden="true">{'<'}</span>

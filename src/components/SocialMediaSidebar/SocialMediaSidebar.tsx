@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from 'styled-components';
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
 import { QUERIES } from '../../constants';

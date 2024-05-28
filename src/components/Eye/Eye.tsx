@@ -1,15 +1,19 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import useMousePosition from '../../hooks/use-mouse-position.hook';
+import { EyeBallProps } from '../../types';
 
 const Eye = ({ ...delegated }) => {
   const mousePosition = useMousePosition();
-  const eyeBallRef = React.useRef();
+  const eyeBallRef = React.useRef<HTMLDivElement>(null);
   const [eyeBallTranX, setEyeBallTranX] = React.useState(0);
   const [eyeBallTranY, setEyeBallTranY] = React.useState(0);
 
   React.useEffect(() => {
     if (!eyeBallRef.current) {
+      return;
+    }
+    if (!mousePosition.x || !mousePosition.y) {
       return;
     }
 
@@ -37,7 +41,7 @@ const Eye = ({ ...delegated }) => {
   );
 };
 
-const EyeBall = styled.div`
+const EyeBall = styled.div<EyeBallProps>`
   height: 8px;
   width: 8px;
   position: absolute;

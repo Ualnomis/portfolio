@@ -4,14 +4,15 @@ import * as Form from '@radix-ui/react-form';
 import styled from 'styled-components';
 import { IoCheckmarkCircle } from 'react-icons/io5';
 import { MdError } from 'react-icons/md';
+import { SentResultProps } from '../../types';
 
 function Contact() {
   const [isSent, setIsSent] = React.useState<boolean>(false);
   const [isSuccess, setIsSuccess] = React.useState<boolean>(false);
 
-  const onSubmit = async (event: React.FormEvent) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
 
     formData.append('access_key', 'e6f6a38f-bc3e-491b-b593-1ad75153a26f');
 
@@ -25,7 +26,7 @@ function Contact() {
     if (data.success) {
       setIsSent(true);
       setIsSuccess(true);
-      event.target.reset();
+      event.currentTarget.reset();
     } else {
       setIsSent(true);
       setIsSuccess(false);
@@ -99,9 +100,9 @@ function Contact() {
   );
 }
 
-const SentResultWrapper = styled.div`
-  color: ${({ isSuccess }: { isSuccess: boolean }) => {
-    return isSuccess ? 'var(--color-success)' : 'var(--color-error)';
+const SentResultWrapper = styled.div<SentResultProps>`
+  color: ${(props) => {
+    return props.$isSuccess ? 'var(--color-success)' : 'var(--color-error)';
   }};
   display: flex;
   flex-direction: column;

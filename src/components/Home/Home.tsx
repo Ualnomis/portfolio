@@ -1,4 +1,3 @@
-import React from 'react';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import styled from 'styled-components';
 import HTMLStyleTag from '../HTMLStyleTag';

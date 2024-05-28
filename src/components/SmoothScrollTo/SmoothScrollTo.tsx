@@ -1,22 +1,27 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { SmoothScrollToProps } from '../../types';
+import { HEADER_HEIGHT_VALUE } from '../../constants';
 
-const SmoothScrollTo = ({
-  id,
-  callback,
-  children,
-}: React.PropsWithChildren) => {
+const SmoothScrollTo = ({ id, callback, children }: SmoothScrollToProps) => {
   const handleClick = (ev: React.MouseEvent) => {
-    // Disable the default anchor-clicking behavior
-    // of scrolling to the element
     ev.preventDefault();
     const target = document.querySelector(`#${id}`);
-    target?.scrollIntoView({
-      top: '96px',
-      behavior: 'smooth',
-    });
-    if (callback) {
-      callback();
+    if (target) {
+      const offset = HEADER_HEIGHT_VALUE;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = target.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth',
+      });
+
+      if (callback) {
+        callback();
+      }
     }
   };
 

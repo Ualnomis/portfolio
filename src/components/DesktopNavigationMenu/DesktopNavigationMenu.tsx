@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { QUERIES } from '../../constants';
 import HTMLStyleTag from '../HTMLStyleTag';
 import styled from 'styled-components';

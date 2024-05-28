@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styled from 'styled-components';
 import * as AspectRatio from '@radix-ui/react-aspect-ratio';
 import { ProjectItemProps } from '../../types';
