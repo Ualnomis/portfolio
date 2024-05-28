@@ -29,7 +29,7 @@ const RightEye = styled(Eye)`
 const Eyes = styled.div`
   height: 20px;
   width: 50px;
-  top: 55px;
+  top: 65px;
   position: absolute;
 `;
 
