@@ -1,0 +1,18 @@
+* Portfolio
+Personal site and portfolio of software engineer Simon Lau.
+
+This is a React.js project created with vite.
+
+** Getting Start
+*** Development
+#+begin_src sh
+npm run dev
+#+end_src
+*** Build
+#+begin_src sh
+npm run build
+#+end_src
+*** Deploy
+#+begin_src sh
+npm run deploy
+#+end_src
