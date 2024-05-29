@@ -7,19 +7,22 @@ import Project from '../Project';
 import Contact from '../Contact';
 import Footer from '../Footer';
 import SocialMediaSidebar from '../SocialMediaSidebar';
+import { MotionConfig } from 'framer-motion';
 
 const App = () => {
   return (
-    <Wrapper>
-      <NavBar />
-      <Home />
-      <About />
-      <Skill />
-      <Project />
-      <Contact />
-      <Footer />
-      <SocialMediaSidebar />
-    </Wrapper>
+    <MotionConfig reducedMotion="user">
+      <Wrapper>
+        <NavBar />
+        <Home />
+        <About />
+        <Skill />
+        <Project />
+        <Contact />
+        <Footer />
+        <SocialMediaSidebar />
+      </Wrapper>
+    </MotionConfig>
   );
 };
 
