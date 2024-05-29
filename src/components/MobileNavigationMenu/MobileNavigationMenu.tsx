@@ -101,8 +101,8 @@ const CloseButton = styled.button`
   padding: 0;
   color: var(--color-text);
   font-size: 3rem;
-  right: 50px;
-  top: 50px;
+  right: 32px;
+  top: 24px;
   opacity: 0.7;
   cursor: pointer;
 

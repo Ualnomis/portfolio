@@ -61,7 +61,11 @@ const Skill = () => {
       });
     };
 
-    setTimeout(animateAndSetSkills, 1000);
+    const animationTimer = setTimeout(animateAndSetSkills, 1000);
+
+    return () => {
+      clearTimeout(animationTimer);
+    };
   }, [isUnsortedSkillWrapperRefInView]);
 
   return (
