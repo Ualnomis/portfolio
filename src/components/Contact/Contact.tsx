@@ -4,6 +4,7 @@ import * as Form from '@radix-ui/react-form';
 import styled from 'styled-components';
 import { Icon } from '@iconify/react';
 import { SentResultProps } from '../../types';
+import { motion } from 'framer-motion';
 
 function Contact() {
   const [isSent, setIsSent] = React.useState<boolean>(false);
@@ -61,16 +62,17 @@ function Contact() {
           <Form.Root onSubmit={onSubmit}>
             <FormField name="name">
               <LabelMessageWrapper>
-                <Form.Label>First Name</Form.Label>
+                <FormLabel>First Name</FormLabel>
                 <FormMessage match="valueMissing">
                   Please enter your name
                 </FormMessage>
               </LabelMessageWrapper>
               <FormControl type="text" required />
+              <FormControldecorationLine />
             </FormField>
             <FormField name="email">
               <LabelMessageWrapper>
-                <Form.Label>Email </Form.Label>
+                <FormLabel>Email </FormLabel>
                 <FormMessage match="valueMissing">
                   Please enter your email
                 </FormMessage>
@@ -79,10 +81,11 @@ function Contact() {
                 </FormMessage>
               </LabelMessageWrapper>
               <FormControl type="email" required />
+              <FormControldecorationLine />
             </FormField>
             <FormField name="message">
               <LabelMessageWrapper>
-                <Form.Label>Message </Form.Label>
+                <FormLabel>Message </FormLabel>
                 <FormMessage match="valueMissing">
                   Please enter your message
                 </FormMessage>
@@ -90,6 +93,7 @@ function Contact() {
               <FormControl asChild required>
                 <TextArea></TextArea>
               </FormControl>
+              <FormControldecorationLine />
             </FormField>
             <FormSubmit>Submit</FormSubmit>
           </Form.Root>
@@ -141,9 +145,10 @@ const TextArea = styled.textarea`
 `;
 
 const FormField = styled(Form.Field)`
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin: 16px 0;
+  margin: 32px 0;
 `;
 
 const FormControl = styled(Form.Control)`
@@ -151,9 +156,11 @@ const FormControl = styled(Form.Control)`
   border: 0;
   background: inherit;
   color: inherit;
-  border-bottom: white solid 3px;
+  min-height: 64px;
+  font-size: 1.25rem;
 
   &:focus {
+    outline: none;
   }
 `;
 
@@ -224,6 +231,30 @@ const LabelMessageWrapper = styled.div`
 
 const FormMessage = styled(Form.Message)`
   color: var(--color-error);
+`;
+
+const FormLabel = styled(Form.Label)`
+  ${FormField}:focus-within & {
+    color: var(--color-primary);
+  }
+`;
+
+const FormControldecorationLine = styled(motion.div)`
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-text);
+  opacity: 0.6;
+
+  ${FormField}:focus-within & {
+    background: var(--color-primary);
+    transform: translateY(10px);
+    transition: transform 250ms ease-in-out;
+  }
 `;
 
 export default Contact;
