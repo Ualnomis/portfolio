@@ -33,3 +33,10 @@ export interface EyeBallProps {
   ref: React.RefObject<HTMLDivElement>;
   style: CustomEyeBallCSSProperties;
 }
+
+export interface SEOProps {
+  title: string;
+  name: string;
+  description: string;
+  type: string;
+}

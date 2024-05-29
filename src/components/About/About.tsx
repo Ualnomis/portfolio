@@ -16,9 +16,9 @@ const About = () => {
         years, I&apos;ve honed my skills in HTML, CSS, JavaScript, and, most
         notably, React. My experience across various industries, from startups
         to established enterprises, has enabled me to adapt and thrive in
-        different work environments.As I&apos;ve grown as a developer, I&apos;ve
-        worked alongside senior designers and developers who have raised my
-        standards for what’s expected of any web application.
+        different work environments. As I&apos;ve grown as a developer,
+        I&apos;ve worked alongside senior designers and developers who have
+        raised my standards for what’s expected of any web application.
       </Paragraph>
       <Paragraph>
         With a knack for turning ideas into engaging digital experiences, I
