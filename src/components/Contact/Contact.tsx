@@ -129,15 +129,14 @@ const TryAgainButton = styled.button`
   background: var(--color-error);
   border: 0;
   padding: var(--padding);
-  border-radius: var(--inner-radius);
+  border-radius: 16px;
 `;
 
 const FormWrapper = styled.div`
   background: var(--color-muted);
-  --padding: 16px;
+  --padding: 32px;
   padding: var(--padding);
-  --inner-radius: 8px;
-  border-radius: calc(var(--inner-radius) + var(--padding));
+  border-radius: 16px;
 `;
 
 const TextArea = styled.textarea`
