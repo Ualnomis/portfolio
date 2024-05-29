@@ -2,6 +2,12 @@ import styled from 'styled-components';
 import * as AspectRatio from '@radix-ui/react-aspect-ratio';
 import { ProjectItemProps } from '../../types';
 import { Icon } from '@iconify/react';
+import { motion } from 'framer-motion';
+
+const linkHoverAnimation = {
+  scale: 1.05,
+  opacity: 1,
+};
 
 const ProjectItem = ({
   imgSrc,
@@ -25,13 +31,21 @@ const ProjectItem = ({
       <ProjectDescription>{description}</ProjectDescription>
       <ProjectItemFooter>
         {githubLink && (
-          <ProjectLink href={githubLink} target="_blank">
+          <ProjectLink
+            href={githubLink}
+            target="_blank"
+            whileHover={linkHoverAnimation}
+          >
             <Icon icon="line-md:github-loop" aria-hidden={true} />
             <span>Github</span>
           </ProjectLink>
         )}
         {youtubeLink && (
-          <ProjectLink href={youtubeLink}>
+          <ProjectLink
+            target="_blank"
+            href={youtubeLink}
+            whileHover={linkHoverAnimation}
+          >
             <Icon icon="line-md:youtube-filled" aria-hidden={true} />
             <span>Youtube</span>
           </ProjectLink>
@@ -73,7 +87,7 @@ const ProjectDescription = styled.p`
   flex: 1;
 `;
 
-const ProjectLink = styled.a`
+const ProjectLink = styled(motion.a)`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -83,11 +97,6 @@ const ProjectLink = styled.a`
   text-decoration: none;
   color: inherit;
   opacity: 0.9;
-
-  &:hover {
-    opacity: 1;
-    transform: scale(1.05);
-  }
 `;
 
 const ProjectStack = styled.ul`

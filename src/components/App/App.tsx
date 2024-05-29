@@ -8,21 +8,33 @@ import Contact from '../Contact';
 import Footer from '../Footer';
 import SocialMediaSidebar from '../SocialMediaSidebar';
 import { MotionConfig } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
+import SEO from '../SEO';
+
+const HelmetContext = {};
 
 const App = () => {
   return (
-    <MotionConfig reducedMotion="user">
-      <Wrapper>
-        <NavBar />
-        <Home />
-        <About />
-        <Skill />
-        <Project />
-        <Contact />
-        <Footer />
-        <SocialMediaSidebar />
-      </Wrapper>
-    </MotionConfig>
+    <HelmetProvider context={HelmetContext}>
+      <MotionConfig reducedMotion="user">
+        <Wrapper>
+          <NavBar />
+          <Home />
+          <About />
+          <Skill />
+          <Project />
+          <Contact />
+          <Footer />
+          <SocialMediaSidebar />
+        </Wrapper>
+      </MotionConfig>
+      <SEO
+        title="Simon Lau | Ualnoims"
+        description="Simon Lau is a software engineer, currently based in Toronto, ON, Canada."
+        name="@ual_nomis"
+        type="website"
+      />
+    </HelmetProvider>
   );
 };
 
