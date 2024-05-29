@@ -139,6 +139,7 @@ const Skill = () => {
 
 const SkillTypeTitle = styled.h3`
   grid-column: 1 / -1;
+  text-align: center;
 `;
 
 const SortedSkillWrapper = styled(motion.div)`
@@ -149,24 +150,25 @@ const SortedSkillWrapper = styled(motion.div)`
 
 const SkillTypeWrapper = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   justify-items: center;
   align-items: center;
   grid-template-rows: 48px;
   padding: 16px;
   border-radius: 16px;
   background: var(--color-muted);
+  gap: 16px;
 `;
 
 const UnsortedSkillWrapper = styled(motion.div)`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   justify-items: center;
   align-items: center;
 `;
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 export default Skill;

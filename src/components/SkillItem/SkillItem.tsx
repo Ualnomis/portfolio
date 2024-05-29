@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 import { SkillItemProps } from '../../types';
 import { motion } from 'framer-motion';
+import { Icon } from '@iconify/react';
 
 const SkillItem = ({
-  icon: Icon,
+  icon,
   text,
   ...delegated
 }: Omit<SkillItemProps, 'type'>) => {
   return (
     <Wrapper {...delegated}>
       <SkillItemIcon>
-        <Icon aria-hidden={true} />
+        <Icon icon={icon} aria-hidden={true} />
       </SkillItemIcon>
       <SkillItemText>{text}</SkillItemText>
     </Wrapper>
@@ -29,6 +30,8 @@ const Wrapper = styled(motion.div)<{
   align-items: center;
 `;
 
-const SkillItemText = styled.div``;
+const SkillItemText = styled.div`
+  text-align: center;
+`;
 
 export default SkillItem;

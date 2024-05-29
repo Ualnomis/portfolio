@@ -2,8 +2,7 @@ import * as React from 'react';
 import PageSection from '../PageSection';
 import * as Form from '@radix-ui/react-form';
 import styled from 'styled-components';
-import { IoCheckmarkCircle } from 'react-icons/io5';
-import { MdError } from 'react-icons/md';
+import { Icon } from '@iconify/react';
 import { SentResultProps } from '../../types';
 
 function Contact() {
@@ -44,7 +43,7 @@ function Contact() {
         {isSent && isSuccess && (
           <SentResultWrapper $isSuccess={isSuccess}>
             <SentResultIconWrapper>
-              <IoCheckmarkCircle />
+              <Icon icon="teenyicons:tick-circle-solid" />
             </SentResultIconWrapper>
             <SentResultMessage>Success!</SentResultMessage>
           </SentResultWrapper>
@@ -52,7 +51,7 @@ function Contact() {
         {isSent && !isSuccess && (
           <SentResultWrapper $isSuccess={isSuccess}>
             <SentResultIconWrapper>
-              <MdError />
+              <Icon icon="teenyicons:x-circle-solid" />
             </SentResultIconWrapper>
             <SentResultMessage>Oops! Something went wrong!</SentResultMessage>
             <TryAgainButton onClick={handleTryAgain}>Try Again</TryAgainButton>

@@ -1,17 +1,17 @@
 import styled from 'styled-components';
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
 import { QUERIES } from '../../constants';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
+import { Icon } from '@iconify/react';
 
 const SocialMediaSidebar = () => {
   return (
     <Wrapper>
       <Link href="https://github.com/ualnomis">
-        <IoLogoGithub aria-hidden={true} />
+        <Icon icon="line-md:github-loop" aria-hidden={true} />
         <VisuallyHidden.Root>Github</VisuallyHidden.Root>
       </Link>
       <Link href="https://www.linkedin.com/in/ualnomis/">
-        <IoLogoLinkedin aria-hidden={true} />
+        <Icon icon="line-md:linkedin" aria-hidden={true} />
         <VisuallyHidden.Root>LinkedIn</VisuallyHidden.Root>
       </Link>
     </Wrapper>

@@ -1,19 +1,3 @@
-import {
-  IoLogoCss3,
-  IoLogoJavascript,
-  IoLogoReact,
-  IoLogoHtml5,
-  IoLogoNodejs,
-  IoLogoDocker,
-} from 'react-icons/io5';
-import { RiNextjsFill } from 'react-icons/ri';
-import {
-  SiStyledcomponents,
-  SiExpress,
-  SiMongodb,
-  SiTypescript,
-} from 'react-icons/si';
-import { BiLogoPostgresql } from 'react-icons/bi';
 import { SkillItemProps } from './types';
 
 export const HEADER_HEIGHT_VALUE = 96;
@@ -32,16 +16,26 @@ export const QUERIES = {
 };
 
 export const SKILLS: SkillItemProps[] = [
-  { icon: IoLogoReact, text: 'React', type: 'frontend' },
-  { icon: RiNextjsFill, text: 'Next.js', type: 'frontend' },
-  { icon: SiTypescript, text: 'TypeScript', type: 'lang' },
-  { icon: IoLogoJavascript, text: 'JavaScript', type: 'lang' },
-  { icon: IoLogoHtml5, text: 'HTML', type: 'lang' },
-  { icon: IoLogoNodejs, text: 'NodeJS', type: 'backend' },
-  { icon: SiExpress, text: 'ExpressJS', type: 'backend' },
-  { icon: SiMongodb, text: 'MongoDB', type: 'backend' },
-  { icon: BiLogoPostgresql, text: 'PostgreSQL', type: 'backend' },
-  { icon: IoLogoCss3, text: 'GraphQL', type: 'backend' },
-  { icon: IoLogoDocker, text: 'Docker', type: 'backend' },
-  { icon: SiStyledcomponents, text: 'Styled Component', type: 'frontend' },
+  { icon: 'logos:react', text: 'React', type: 'frontend' },
+  { icon: 'logos:nextjs-icon', text: 'Next.js', type: 'frontend' },
+  { icon: 'logos:typescript-icon', text: 'TypeScript', type: 'lang' },
+  { icon: 'logos:javascript', text: 'JavaScript', type: 'lang' },
+  { icon: 'devicon:html5', text: 'HTML', type: 'lang' },
+  { icon: 'logos:css-3', text: 'CSS', type: 'lang' },
+  { icon: 'logos:nodejs-icon', text: 'NodeJS', type: 'backend' },
+  { icon: 'skill-icons:expressjs-light', text: 'ExpressJS', type: 'backend' },
+  { icon: 'logos:mongodb-icon', text: 'MongoDB', type: 'backend' },
+  { icon: 'logos:postgresql', text: 'PostgreSQL', type: 'backend' },
+  { icon: 'logos:graphql', text: 'GraphQL', type: 'lang' },
+  { icon: 'logos:docker-icon', text: 'Docker', type: 'backend' },
+  {
+    icon: 'skill-icons:styledcomponents',
+    text: 'Styled Component',
+    type: 'frontend',
+  },
+  { icon: 'logos:redux', text: 'Redux', type: 'frontend' },
+  { icon: 'tabler:brand-react-native', text: 'React Native', type: 'frontend' },
+  { icon: 'logos:python', text: 'Python', type: 'lang' },
+  { icon: 'logos:php', text: 'PHP', type: 'lang' },
+  { icon: 'devicon:jquery', text: 'jQuery', type: 'frontend' },
 ];

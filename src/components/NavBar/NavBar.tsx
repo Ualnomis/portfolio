@@ -5,7 +5,7 @@ import { HEADER_HEIGHT, QUERIES } from '../../constants';
 import MobileNavigationMenu from '../MobileNavigationMenu';
 import DesktopNavigationMenu from '../DesktopNavigationMenu';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
-import { IoMenu } from 'react-icons/io5';
+import { Icon } from '@iconify/react';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false);
@@ -21,7 +21,7 @@ const NavBar = () => {
       </Logo>
       <DesktopNavigationMenu />
       <MenuButton aria-expanded={isMenuOpen} onClick={toggleIsMenuOpen}>
-        <IoMenu aria-hidden="true" focusable="false" />
+        <Icon icon="line-md:menu" aria-hidden="true" focusable="false" />
         <VisuallyHidden.Root>Open Nvigation Menu</VisuallyHidden.Root>
       </MenuButton>
       {isMenuOpen && <MobileNavigationMenu handleDismiss={toggleIsMenuOpen} />}

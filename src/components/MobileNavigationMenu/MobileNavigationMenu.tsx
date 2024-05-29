@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import styled from 'styled-components';
 import HTMLStyleTag from '../HTMLStyleTag';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
-import { IoClose } from 'react-icons/io5';
+import { Icon } from '@iconify/react';
 import { RemoveScroll } from 'react-remove-scroll';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 import SmoothScrollTo from '../SmoothScrollTo';
@@ -18,7 +18,11 @@ const MobileNavigationMenu = ({
       <RemoveScroll>
         <Wrapper>
           <CloseButton onClick={handleDismiss}>
-            <CloseIcon aria-hidden="true" focusable="false" />
+            <Icon
+              icon="line-md:menu-to-close-transition"
+              aria-hidden="true"
+              focusable="false"
+            />
             <VisuallyHidden.Root>Close Nvigation Menu</VisuallyHidden.Root>
           </CloseButton>
           <NavigationMenuRoot>
@@ -88,8 +92,6 @@ const Wrapper = styled.div`
   background: var(--color-blurred-background);
   backdrop-filter: blur(8px);
 `;
-
-const CloseIcon = styled(IoClose)``;
 
 const CloseButton = styled.button`
   position: absolute;
