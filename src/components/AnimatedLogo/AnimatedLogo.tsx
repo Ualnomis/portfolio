@@ -12,7 +12,7 @@ const AnimatedLogo = () => {
   useTimeout(() => {
     setText('simonlaU');
     setIsAnimated(true);
-  }, 1500);
+  }, 500);
 
   return (
     <LayoutGroup>
