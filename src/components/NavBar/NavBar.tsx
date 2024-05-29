@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import HTMLStyleTag from '../HTMLStyleTag';
 import { HEADER_HEIGHT, QUERIES } from '../../constants';
 import MobileNavigationMenu from '../MobileNavigationMenu';
 import DesktopNavigationMenu from '../DesktopNavigationMenu';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
-import { IoMenu } from 'react-icons/io5';
+import { Icon } from '@iconify/react';
+import AnimatedLogo from '../AnimatedLogo';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false);
@@ -16,25 +16,16 @@ const NavBar = () => {
 
   return (
     <Wrapper>
-      <Logo>
-        <HTMLStyleTag>Simon</HTMLStyleTag>
-      </Logo>
+      <AnimatedLogo />
       <DesktopNavigationMenu />
       <MenuButton aria-expanded={isMenuOpen} onClick={toggleIsMenuOpen}>
-        <IoMenu aria-hidden="true" focusable="false" />
+        <Icon icon="line-md:menu" aria-hidden="true" focusable="false" />
         <VisuallyHidden.Root>Open Nvigation Menu</VisuallyHidden.Root>
       </MenuButton>
       {isMenuOpen && <MobileNavigationMenu handleDismiss={toggleIsMenuOpen} />}
     </Wrapper>
   );
 };
-
-const Logo = styled.div`
-  margin-right: auto;
-  padding-right: 32px;
-  font-size: 3rem;
-  color: var(--color-primary);
-`;
 
 const MenuButton = styled.button`
   display: none;

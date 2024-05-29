@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as AspectRatio from '@radix-ui/react-aspect-ratio';
 import { ProjectItemProps } from '../../types';
-import { IoLogoGithub, IoLogoYoutube } from 'react-icons/io5';
+import { Icon } from '@iconify/react';
 
 const ProjectItem = ({
   imgSrc,
@@ -26,13 +26,13 @@ const ProjectItem = ({
       <ProjectItemFooter>
         {githubLink && (
           <ProjectLink href={githubLink} target="_blank">
-            <IoLogoGithub />
+            <Icon icon="line-md:github-loop" aria-hidden={true} />
             <span>Github</span>
           </ProjectLink>
         )}
         {youtubeLink && (
           <ProjectLink href={youtubeLink}>
-            <IoLogoYoutube />
+            <Icon icon="line-md:youtube-filled" aria-hidden={true} />
             <span>Youtube</span>
           </ProjectLink>
         )}

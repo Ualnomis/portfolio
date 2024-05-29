@@ -3,6 +3,7 @@ import HTMLStyleTag from '../HTMLStyleTag';
 import MaxWidthWrapper from '../MaxWidthWrapper';
 import styled from 'styled-components';
 import { HEADER_HEIGHT } from '../../constants';
+import { motion } from 'framer-motion';
 
 interface Props {
   header: string;
@@ -10,14 +11,36 @@ interface Props {
   children: React.ReactNode;
 }
 
+const FADE_UP_ANIMATION_VARIANTS = {
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { type: 'spring' } },
+};
+
 const PageSection = ({ header, id, children }: Props) => {
   return (
     <Section id={id}>
       <MaxWidthWrapper>
-        <SectionHeader>
-          <HTMLStyleTag>{header}</HTMLStyleTag>
-        </SectionHeader>
-        {children}
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
+          <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
+            <SectionHeader>
+              <HTMLStyleTag>{header}</HTMLStyleTag>
+            </SectionHeader>
+          </motion.div>
+          <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
+            {children}
+          </motion.div>
+        </motion.div>
       </MaxWidthWrapper>
     </Section>
   );

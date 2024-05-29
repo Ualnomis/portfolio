@@ -2,9 +2,9 @@ import * as React from 'react';
 import PageSection from '../PageSection';
 import * as Form from '@radix-ui/react-form';
 import styled from 'styled-components';
-import { IoCheckmarkCircle } from 'react-icons/io5';
-import { MdError } from 'react-icons/md';
+import { Icon } from '@iconify/react';
 import { SentResultProps } from '../../types';
+import { motion } from 'framer-motion';
 
 function Contact() {
   const [isSent, setIsSent] = React.useState<boolean>(false);
@@ -44,7 +44,7 @@ function Contact() {
         {isSent && isSuccess && (
           <SentResultWrapper $isSuccess={isSuccess}>
             <SentResultIconWrapper>
-              <IoCheckmarkCircle />
+              <Icon icon="teenyicons:tick-circle-solid" />
             </SentResultIconWrapper>
             <SentResultMessage>Success!</SentResultMessage>
           </SentResultWrapper>
@@ -52,7 +52,7 @@ function Contact() {
         {isSent && !isSuccess && (
           <SentResultWrapper $isSuccess={isSuccess}>
             <SentResultIconWrapper>
-              <MdError />
+              <Icon icon="teenyicons:x-circle-solid" />
             </SentResultIconWrapper>
             <SentResultMessage>Oops! Something went wrong!</SentResultMessage>
             <TryAgainButton onClick={handleTryAgain}>Try Again</TryAgainButton>
@@ -62,16 +62,17 @@ function Contact() {
           <Form.Root onSubmit={onSubmit}>
             <FormField name="name">
               <LabelMessageWrapper>
-                <Form.Label>First Name</Form.Label>
+                <FormLabel>First Name</FormLabel>
                 <FormMessage match="valueMissing">
                   Please enter your name
                 </FormMessage>
               </LabelMessageWrapper>
               <FormControl type="text" required />
+              <FormControldecorationLine />
             </FormField>
             <FormField name="email">
               <LabelMessageWrapper>
-                <Form.Label>Email </Form.Label>
+                <FormLabel>Email </FormLabel>
                 <FormMessage match="valueMissing">
                   Please enter your email
                 </FormMessage>
@@ -80,10 +81,11 @@ function Contact() {
                 </FormMessage>
               </LabelMessageWrapper>
               <FormControl type="email" required />
+              <FormControldecorationLine />
             </FormField>
             <FormField name="message">
               <LabelMessageWrapper>
-                <Form.Label>Message </Form.Label>
+                <FormLabel>Message </FormLabel>
                 <FormMessage match="valueMissing">
                   Please enter your message
                 </FormMessage>
@@ -91,6 +93,7 @@ function Contact() {
               <FormControl asChild required>
                 <TextArea></TextArea>
               </FormControl>
+              <FormControldecorationLine />
             </FormField>
             <FormSubmit>Submit</FormSubmit>
           </Form.Root>
@@ -126,15 +129,14 @@ const TryAgainButton = styled.button`
   background: var(--color-error);
   border: 0;
   padding: var(--padding);
-  border-radius: var(--inner-radius);
+  border-radius: 16px;
 `;
 
 const FormWrapper = styled.div`
   background: var(--color-muted);
-  --padding: 16px;
+  --padding: 32px;
   padding: var(--padding);
-  --inner-radius: 8px;
-  border-radius: calc(var(--inner-radius) + var(--padding));
+  border-radius: 16px;
 `;
 
 const TextArea = styled.textarea`
@@ -142,9 +144,10 @@ const TextArea = styled.textarea`
 `;
 
 const FormField = styled(Form.Field)`
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin: 16px 0;
+  margin: 32px 0;
 `;
 
 const FormControl = styled(Form.Control)`
@@ -152,9 +155,11 @@ const FormControl = styled(Form.Control)`
   border: 0;
   background: inherit;
   color: inherit;
-  border-bottom: white solid 3px;
+  min-height: 64px;
+  font-size: 1.25rem;
 
   &:focus {
+    outline: none;
   }
 `;
 
@@ -225,6 +230,30 @@ const LabelMessageWrapper = styled.div`
 
 const FormMessage = styled(Form.Message)`
   color: var(--color-error);
+`;
+
+const FormLabel = styled(Form.Label)`
+  ${FormField}:focus-within & {
+    color: var(--color-primary);
+  }
+`;
+
+const FormControldecorationLine = styled(motion.div)`
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-text);
+  opacity: 0.6;
+
+  ${FormField}:focus-within & {
+    background: var(--color-primary);
+    transform: translateY(10px);
+    transition: transform 250ms ease-in-out;
+  }
 `;
 
 export default Contact;
