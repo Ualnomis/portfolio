@@ -3,6 +3,9 @@ import { IconType } from 'react-icons';
 export interface SkillItemProps {
   icon: IconType;
   text: string;
+  type: 'frontend' | 'backend' | 'lang';
+  layout?: boolean | 'size' | 'position' | 'preserve-aspect';
+  layoutId?: string;
 }
 
 export interface ProjectItemProps {

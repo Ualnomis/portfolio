@@ -1,14 +1,19 @@
 import styled from 'styled-components';
 import { SkillItemProps } from '../../types';
+import { motion } from 'framer-motion';
 
-const SKillItem = ({ icon: Icon, text }: SkillItemProps) => {
+const SkillItem = ({
+  icon: Icon,
+  text,
+  ...delegated
+}: Omit<SkillItemProps, 'type'>) => {
   return (
-    <SkillItem>
+    <Wrapper {...delegated}>
       <SkillItemIcon>
         <Icon aria-hidden={true} />
       </SkillItemIcon>
       <SkillItemText>{text}</SkillItemText>
-    </SkillItem>
+    </Wrapper>
   );
 };
 
@@ -16,7 +21,9 @@ const SkillItemIcon = styled.div`
   font-size: 4rem;
 `;
 
-const SkillItem = styled.div`
+const Wrapper = styled(motion.div)<{
+  layout?: boolean | 'size' | 'position' | 'preserve-aspect';
+}>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,4 +31,4 @@ const SkillItem = styled.div`
 
 const SkillItemText = styled.div``;
 
-export default SKillItem;
+export default SkillItem;
