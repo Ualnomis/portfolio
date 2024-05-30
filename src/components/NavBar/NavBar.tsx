@@ -60,6 +60,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   background: var(--color-background);
+  justify-content: space-between;
 `;
 
 export default NavBar;
