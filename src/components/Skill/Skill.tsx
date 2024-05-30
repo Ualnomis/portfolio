@@ -61,7 +61,7 @@ const Skill = () => {
       });
     };
 
-    const animationTimer = setTimeout(animateAndSetSkills, 0.3);
+    const animationTimer = setTimeout(animateAndSetSkills, 1000);
 
     return () => {
       clearTimeout(animationTimer);
