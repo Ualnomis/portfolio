@@ -6,6 +6,7 @@ import DesktopNavigationMenu from '../DesktopNavigationMenu';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 import { Icon } from '@iconify/react';
 import AnimatedLogo from '../AnimatedLogo';
+import SmoothScrollTo from '../SmoothScrollTo';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false);
@@ -16,7 +17,9 @@ const NavBar = () => {
 
   return (
     <Wrapper>
-      <AnimatedLogo />
+      <SmoothScrollTo id="home">
+        <AnimatedLogo />
+      </SmoothScrollTo>
       <DesktopNavigationMenu />
       <MenuButton aria-expanded={isMenuOpen} onClick={toggleIsMenuOpen}>
         <Icon icon="line-md:menu" aria-hidden="true" focusable="false" />

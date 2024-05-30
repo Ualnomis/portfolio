@@ -6,7 +6,7 @@ import Avatar from '../Avatar';
 
 const Home = () => {
   return (
-    <Section>
+    <Section id="home">
       <Wrapper>
         <Introduction>
           <NameHeading>
