@@ -19,6 +19,7 @@ const NavBar = () => {
     <Wrapper>
       <SmoothScrollTo id="home">
         <AnimatedLogo />
+        <VisuallyHidden.Root>Home</VisuallyHidden.Root>
       </SmoothScrollTo>
       <DesktopNavigationMenu />
       <MenuButton aria-expanded={isMenuOpen} onClick={toggleIsMenuOpen}>
