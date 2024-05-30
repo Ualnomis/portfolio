@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import SkillItem from '../SkillItem';
 import PageSection from '../PageSection';
 import { motion, LayoutGroup, useInView, animate } from 'framer-motion';
-import { SKILLS } from '../../constants';
+import { QUERIES, SKILLS } from '../../constants';
 import { SkillItemProps } from '../../types';
 
 // Consolidate skill data and state into a single object
@@ -150,6 +150,10 @@ const SortedSkillWrapper = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+
+  @media ${QUERIES.tabletAndDown} {
+    grid-template-columns: revert;
+  }
 `;
 
 const SkillTypeWrapper = styled(motion.div)`
