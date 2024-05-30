@@ -46,9 +46,8 @@ const CharacterWrapper = styled(motion.div)<{ $isAnimated: boolean }>`
 `;
 
 const LogoWrapper = styled.div`
-  margin-right: auto;
-  padding-right: 32px;
-  font-size: 3rem;
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.1626794258373208rem + 3.827751196172249vw, 3rem);
   color: var(--color-primary);
 `;
 
